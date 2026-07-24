@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5], key;
+    bool found = false;
+
+    cout << "Enter 5 elements: ";
+
+    // Read array elements
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> arr[i];
+    }
+
+    cout << "Enter element to search: ";
+    cin >> key;
+
+    // Linear Search
+    for (int i = 0; i < 5; i++)
+    {
+        if (arr[i] == key)
+        {
+            cout << "Element found at position " << i + 1;
+            found = true;
+            break;
+        }
+    }
+
+    if (!found)
+    {
+        cout << "Element not found";
+    }
+
+    return 0;
+}
